@@ -9,6 +9,7 @@ import {
 } from '@/components';
 import StyledComponentsRegistry from "@/lib/registry";
 import Head from "next/head";
+import {DefaultLayout} from "@/layout/DefaultLayout";
 
 export const metadata: Metadata = {
   title: 'Beyond Online NextJS',
@@ -24,7 +25,9 @@ export default function RootLayout({ children, }: Readonly<{children: React.Reac
       <body>
         <StyledComponentsRegistry>
           <NextJsCustomConfig>
+            <DefaultLayout>
               {children}
+            </DefaultLayout>
           </NextJsCustomConfig>
         </StyledComponentsRegistry>
       </body>
