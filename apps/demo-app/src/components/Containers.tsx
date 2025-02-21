@@ -12,6 +12,7 @@ export const StyledAppLayoutContainer = styled.div`
 
 export const StyledContentContainer = styled.div`
   display: flex;
+  height: 100vh;
 `;
 
 export const ContentContainer = ({ children }: Readonly<{
