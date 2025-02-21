@@ -153,43 +153,107 @@ export function DefaultLayout({ children }: Readonly<{
         </>
       }
       footer={<Footer
+        extendedContent={[
+          {
+            actions: [
+              {
+                href: 'http://zeiss.com',
+                label: 'MyZEISS'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'Online Shop'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'Peer Insights'
+              }
+            ],
+            headline: 'FREQUENTLY USED'
+          },
+          {
+            actions: [
+              {
+                href: 'http://zeiss.com',
+                label: 'ZEISS at a glance'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'Career'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'Newsroom'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'Compliance'
+              }
+            ],
+            headline: 'ABOUT ZEISS'
+          },
+          {
+            actions: [
+              {
+                href: 'http://zeiss.com',
+                label: 'Facebook'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'Instagram'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'LinkedIn'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'X'
+              },
+              {
+                href: 'http://zeiss.com',
+                label: 'Youtube'
+              }
+            ],
+            headline: 'SOCIAL MEDIA'
+          },
+        ]}
         primaryContent={{
           actions: [
             {
               label: 'Contact',
-              onClick: () => {},
+              onClick: () => {}
             },
             {
               label: 'Publisher',
-              onClick: () => {},
+              onClick: () => {}
             },
             {
               label: 'Legal Notice',
-              onClick: () => {},
+              onClick: () => {}
             },
             {
               label: 'Data Protection',
-              onClick: () => {},
+              onClick: () => {}
             },
             {
               label: 'Tracking Preferences',
-              onClick: () => {},
+              onClick: () => {}
             },
             {
               href: 'http://zeiss.com',
-              label: 'Link 1',
+              label: 'Link 1'
             },
             {
               href: 'http://zeiss.com',
-              label: 'Link 2',
-            },
+              label: 'Link 2'
+            }
           ],
-          headline: 'Legal',
+          headline: 'Legal'
         }}
-        productName="Example App v1.0"
         title={{
           label: 'ZEISS International',
-          onClick: () => {},
+          onClick: () => {}
         }}
       />}
     >

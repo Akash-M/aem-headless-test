@@ -12,8 +12,8 @@ import Head from "next/head";
 import {DefaultLayout} from "@/layout/DefaultLayout";
 
 export const metadata: Metadata = {
-  title: 'Beyond Online NextJS',
-  description: 'Beyond Online NextJS example app',
+  title: 'MyZEISS',
+  description: 'MyZEISS Demo',
 };
 
 export default function RootLayout({ children, }: Readonly<{children: React.ReactNode; }>) {
