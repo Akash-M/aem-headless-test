@@ -8,6 +8,10 @@ import {
   Headline, InlineLink,
   styled, TextInput
 } from "@zeiss/beyond-online-react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import dataSlider from "@/_data/slider-data.json";
+import 'swiper/css';
+import DemoSlider from "@/components/DemoSlider";
 
 const StyledLandingPage = styled.div`
   position: relative;
@@ -17,7 +21,7 @@ const StyledMedMyZEISSImageContainer = styled.div`
   background-image: url('/assets/med-myzeiss.png');
   background-size: contain;
   background-repeat: no-repeat;
-  height: 900px;
+  height: 700px;
   position: relative;
   width: calc(100vw - 20px);
   margin-left: calc(-50vw + 50% + 10px);
@@ -45,12 +49,23 @@ const StyledButton = styled(Button)`
   margin: var(--spacing-2xl) auto 0;
 `
 
+const StyledCarouselContainer = styled.div`
+  width: calc(100vw - 20px);
+  margin-left: calc(-50vw + 50% + 10px);
+`
+
+const StyledVideoContainer = styled.div`
+  margin-top: var(--spacing-xl);
+`
+
 
 const StyledFAQContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-l);
+  margin-top: var(--spacing-2xl);
+  margin-bottom: var(--spacing-2xl);
 `
 
 
@@ -90,6 +105,17 @@ export default function Home() {
         </StyledMedMyZEISSImageContainerContent>
       </StyledMedMyZEISSImageContainer>
 
+      <StyledCarouselContainer>
+        <DemoSlider data={dataSlider} />
+      </StyledCarouselContainer>
+
+      {/*<StyledVideoContainer>
+        <video width="320" height="240" controls preload="none">
+          <source src="https://embed-ssl.wistia.com/deliveries/b6f2e592c186238dab3a2573399c9cd9.jpg?image_play_button_size=2x&amp;image_crop_resized=960x540&amp;image_play_button_rounded=1&amp;image_play_button_color=54bbffe0" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </StyledVideoContainer>*/}
+
       <StyledFAQContainer>
         <Headline
           headline="Frequently Asked Questions"
@@ -101,7 +127,8 @@ export default function Home() {
               What is MyZEISS?
             </AccordionButton>
             <AccordionPanel>
-              The MyZEISS customer platform is your central point of contact for all digital services that ZEISS offers you: from managing your devices and systems to customer services and training.
+              The MyZEISS customer platform is your central point of contact for all digital services that ZEISS offers
+              you: from managing your devices and systems to customer services and training.
 
               My Learning: Learn more about your systems with detailed product tutorials and take online certification courses from the ZEISS Academy. In addition, you get access to clinical case presentations from your professional colleagues in the Peer Insights section.
               My Tools: You get access to patient materials exclusively for ophthalmology customers that will help you advance your business. The CONVIVO Image Library is exclusively available to ZEISS CONVIVO customers.

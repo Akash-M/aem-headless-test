@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@zeiss/beyond-online-react": "2.41.0",
+    "swiper": "^11.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "next": "15.1.7",
