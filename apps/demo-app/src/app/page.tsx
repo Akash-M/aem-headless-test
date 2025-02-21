@@ -1,19 +1,96 @@
 "use client";
 
-import * as React from "react";
-import {Accordion, AccordionButton, AccordionItem, AccordionPanel, Headline, styled} from "@zeiss/beyond-online-react";
+import {
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel, Button,
+  Headline, InlineLink,
+  styled, TextInput
+} from "@zeiss/beyond-online-react";
 
-const StyledContainer = styled.div`
+const StyledLandingPage = styled.div`
+  position: relative;
+`
+
+const StyledMedMyZEISSImageContainer = styled.div`
+  background-image: url('/assets/med-myzeiss.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 900px;
+  position: relative;
+  width: calc(100vw - 20px);
+  margin-left: calc(-50vw + 50% + 10px);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+`;
+
+const StyledMedMyZEISSImageContainerContent = styled.div`
+  padding: 0 var(--spacing-4xl);
+  margin: 0 auto;
+  padding-top: var(--spacing-4xl);
+  max-width: 1440px;
+`
+
+const StyledHeadline = styled(Headline)`
+  max-width: 700px;
+  padding: var(--spacing-s) 0;
+`
+
+const StyledInlineLink = styled(InlineLink)`
+  margin-top: var(--spacing-l);
+`
+
+const StyledButton = styled(Button)`
+  margin: var(--spacing-2xl) auto 0;
+`
+
+
+const StyledFAQContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--spacing-l);
 `
 
+
 export default function Home() {
   return (
-    <div>
-      <StyledContainer>
+    <StyledLandingPage>
+      <StyledMedMyZEISSImageContainer>
+        <StyledMedMyZEISSImageContainerContent>
+          <StyledHeadline
+            eyebrow="Everything at a glance"
+            headline="Make the most of the potential of your ZEISS products: With MyZEISS"
+            size="2xl"
+          />
+
+          <StyledInlineLink href="/">
+            <b>Click here to log in.</b>
+          </StyledInlineLink>
+
+          <StyledHeadline
+            headline="Or register in three easy steps."
+            subHeadline="Enter your email address, fill out the form and activate your user account by clicking on the link in the confirmation email."
+            size="s"
+          />
+
+          <TextInput
+            label="To register, enter your business email address"
+            placeholder="example@email.com"
+          />
+
+          <StyledButton
+            onClick={() => {}}
+            size="m"
+            variant="primary"
+          >
+            Register Now
+          </StyledButton>
+        </StyledMedMyZEISSImageContainerContent>
+      </StyledMedMyZEISSImageContainer>
+
+      <StyledFAQContainer>
         <Headline
           headline="Frequently Asked Questions"
           size="l"
@@ -73,7 +150,7 @@ export default function Home() {
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
-      </StyledContainer>
-    </div>
+      </StyledFAQContainer>
+    </StyledLandingPage>
   );
 }
