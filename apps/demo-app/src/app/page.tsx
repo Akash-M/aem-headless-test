@@ -84,7 +84,10 @@ export default function Home() {
             data-aue-label={'headline'}
           />
 
-          <StyledInlineLink href="/">
+          <StyledInlineLink
+            href="/"
+            data-aue-type={'text'}
+            data-aue-label={'login link'}>
             <b>Click here to log in.</b>
           </StyledInlineLink>
 
@@ -92,11 +95,13 @@ export default function Home() {
             headline="Or register in three easy steps."
             subHeadline="Enter your email address, fill out the form and activate your user account by clicking on the link in the confirmation email."
             size="s"
+            data-aue-type={'component'}
           />
 
           <TextInput
             label="To register, enter your business email address"
             placeholder="example@email.com"
+            data-aue-type={'component'}
           />
 
           <StyledButton
