@@ -8,6 +8,7 @@ import {
   Headline, InlineLink,
   styled, TextInput
 } from "@zeiss/beyond-online-react";
+import Script from 'next/script';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import dataSlider from "@/_data/slider-data.json";
 import 'swiper/css';
@@ -72,6 +73,7 @@ const StyledFAQContainer = styled.div`
 export default function Home() {
   return (
     <StyledLandingPage>
+      <Script src="https://universal-editor-service.adobe.io/cors.js" />
       <StyledMedMyZEISSImageContainer>
         <StyledMedMyZEISSImageContainerContent>
           <StyledHeadline
