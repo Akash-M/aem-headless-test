@@ -80,6 +80,8 @@ export default function Home() {
             eyebrow="Everything at a glance"
             headline="Make the most of the potential of your ZEISS products: With MyZEISS"
             size="2xl"
+            data-aue-type={'text'}
+            data-aue-label={'headline'}
           />
 
           <StyledInlineLink href="/">
