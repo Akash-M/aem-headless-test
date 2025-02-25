@@ -76,6 +76,7 @@ export default function Home() {
       <Script src="https://universal-editor-service.adobe.io/cors.js" />
       <StyledMedMyZEISSImageContainer>
         <StyledMedMyZEISSImageContainerContent>
+          <h1 data-aue-prop="title" data-aue-type="text">Test AEM Universal Editor</h1>
           <StyledHeadline
             eyebrow="Everything at a glance"
             headline="Make the most of the potential of your ZEISS products: With MyZEISS"
