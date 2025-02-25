@@ -26,6 +26,7 @@ export default function RootLayout({ children, }: Readonly<{children: React.Reac
         <link rel="manifest" href="/etc.clientlibs/zeiss-aem-app/jupiter/clientlibs/jupiter-components.app/resources/assets/favicons/site.webmanifest"/>
         <link rel="mask-icon" href="/etc.clientlibs/zeiss-aem-app/jupiter/clientlibs/jupiter-components.app/resources/assets/favicons/safari-pinned-tab.svg" color="#0f2db3"/>
         <link rel="stylesheet" href="https://assets.zeiss.com/fonts/fonts.css" />
+        <script src="https://universal-editor-service.adobe.io/cors.js" async></script>
       </Head>
       <body>
         <StyledComponentsRegistry>
